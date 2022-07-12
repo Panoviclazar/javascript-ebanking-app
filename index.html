@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Modern Banking DEMO APP</title>
+  </head>
+
+  <!--------------------- BODY -------------------------->
+
+  <body>
+
+    <!-- NAVIGATION -->
+    <nav>
+      <p class="welcome__message">Log in to get started</p>
+      <div class="dark__mode">
+        <i class="fa-solid fa-landmark"></i>
+        <div class="toggle__switch">
+          <label>
+            <input type="checkbox" />
+            <span class="slider"></span>
+          </label>
+        </div>
+      </div>
+      <form class="login">
+        <input
+          type="text"
+          placeholder="user"
+          class="login__input login__input__user"
+        />
+        <input
+          type="text"
+          placeholder="PIN"
+          maxlength="4"
+          class="login__input login__input__pin"
+        />
+        <button class="login__btn">&rarr;</button>
+      </form>
+    </nav>
+
+    <!-- TIME -->
+
+    <div class="time__and__date">1</div>
+    
+    <!-- ALL THE CONTENT -->
+
+    <main class="app">
+      <div class="left">
+        <div class="card">
+          <div class="credit__card">credit card</div>
+          <div class="credit__card__number"></div>
+          <div class="credit__card__holder"></div>
+          <div class="credit__card__expiration__date"></div>
+          <i class="fa-brands fa-cc-visa"></i>
+        </div>
+        <div class="movements"></div>
+      </div>
+      <div class="right">
+        <div class="balance__and__summaries">
+          <div class="total__balance total">
+            <p class="total__balance__label total__label">BALANCE</p>
+            <p class="total__balance__value total__value">$10000</p>
+            <i class="fa-solid fa-sack-dollar"></i>
+          </div>
+          <div class="total__incomes total">
+            <p class="total__incomes__label total__label">INCOMES</p>
+            <p class="total__incomes__value total__value">$15000</p>
+            <i class="fa-solid fa-arrow-trend-up"></i>
+          </div>
+          <div class="total__out total">
+            <p class="total__out__label total__label">OUTCOMES</p>
+            <p class="total__out__value total__value">$5000</p>
+            <i class="fa-solid fa-arrow-trend-down"></i>
+          </div>
+        </div>
+        <div class="actions">
+          <!-- TRANSFERS -->
+          <div class="operation operation__transfer">
+            <h2>Transfer money</h2>
+            <form class="form form__transfer">
+              <input type="text" class="form__input form__input__to" />
+              <input type="number" class="form__input form__input__amount" />
+              <button class="form__btn form__btn__transfer">&rarr;</button>
+              <label class="form__label">Transfer to</label>
+              <label class="form__label">Amount</label>
+            </form>
+          </div>
+
+          <!-- LOAN -->
+          <div class="operation operation__loan">
+            <h2>Request loan</h2>
+            <form class="form form__loan">
+              <input
+                type="number"
+                class="form__input form__input__loan__amount"
+              />
+              <button class="form__btn form__btn__loan">&rarr;</button>
+              <label class="form__label form__label__loan">Amount</label>
+            </form>
+          </div>
+
+          <!-- CLOSE -->
+          <div class="operation operation__close">
+            <h2>Close account</h2>
+            <form class="form form__close">
+              <input type="text" class="form__input form__input__user" />
+              <input
+                type="password"
+                maxlength="6"
+                class="form__input form__input__pin"
+              />
+              <button class="form__btn form__btn__close">&rarr;</button>
+              <label class="form__label">Confirm user</label>
+              <label class="form__label">Confirm PIN</label>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="creator">
+      <p>Developed by Lazar</p>
+      <p>Learned from Jonas Schmedtmann, "Complete Javascript Course"</p>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>
