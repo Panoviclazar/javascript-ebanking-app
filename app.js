@@ -209,7 +209,8 @@ loginBtn.addEventListener("click", function (e) {
 
   if (currentAcc?.pin === +inputLoginPin.value) { // pw verification
     displayWelcomeMessage(currentAcc); // welcome message
-    main.style.opacity = 1; // display all the content
+    main.style.display = "flex"; // display all the content
+    labelCreator.style.display = "block"; // display all the content
     main.style.margin = "40px auto";
     labelTime.style.opacity = 1; // display time and date
 
@@ -295,7 +296,8 @@ closeBtn.addEventListener("click", function (e) {
 
     accounts.splice(index, 1); // deleting acc from accs list
 
-    main.style.opacity = 0; // close all the content and back to main log in page
+    main.style.display = 'none'; // close all the content and back to main log in page
+    labelCreator.style.display = 'none';
     main.style.margin = "70px auto";
     labelTime.style.opacity = 0;
   }
@@ -314,4 +316,5 @@ slider.addEventListener("click", () => {
   labelTime.classList.toggle("dark__mode__body");
   logo.classList.toggle("dark__mode__body");
   labelCreator.classList.toggle("dark__mode__body");
+  loginBtn.classList.toggle("dark__mode__body");
 });

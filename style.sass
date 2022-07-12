@@ -85,8 +85,8 @@ main
   min-width: 1000px
   height: 650px
   margin: 70px auto
-  display: flex
-  opacity: 0
+  display: none
+  opacity: 1
   transition: 1s all
 
   // movements and credit card
@@ -273,6 +273,7 @@ main
   // credits
 
 footer
+  display: none
   position: relative
   font-family: 'Montserrat', sans-serif
   color: #fbfaff
@@ -291,3 +292,52 @@ footer
 .dark__mode__body
   background-color: #f3f3f3
   color: #28292c
+
+  // responsive
+
+@media only screen and (max-width: 600px)
+  body
+    display: flex
+    flex-direction: column
+    .time__and__date
+      margin-top: 10px
+    nav
+      flex-direction: column
+      gap: 20px
+      form
+        display: flex
+        flex-direction: column
+        gap: 15px
+    main
+      opacity: 1
+      min-width: 150px
+      display: none
+      flex-direction: column
+      height: 1600px
+      width: 95%
+      max-width: 95%
+      margin: 0px auto
+      gap: 100px
+      background: transparent
+      .left
+        width: 100%
+        height: 100%
+        border-top-left-radius: 20px
+        border-top-right-radius: 20px
+        border-bottom-left-radius: 0px
+        .movements__row
+          padding: 20px 40px
+          .movements__type
+            display: none
+      .right
+        width: 100%
+        height: 50%
+        gap: 100px
+        .balance__and__summaries
+          display: flex
+          flex-direction: column
+          justify-content: center
+          width: 100%
+          gap: 10px
+          .total
+            width: 80%
